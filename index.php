@@ -48,7 +48,7 @@
                         <option selected>Choose any topic </option>
                     <?php 
                     
-                    $jsonData = file_get_contents("../Topics.json");
+                    $jsonData = file_get_contents("Topics.json");
                     $data = json_decode($jsonData , true);
                     
                     foreach($data as $key => $value){
@@ -59,7 +59,7 @@
                     
                     ?>
                          
-                          <option value="$1000 below"><?php  echo $value['topic'];   ?></option>
+                          <option value="<?php  echo $value['topic'];   ?>"><?php  echo $value['topic'];   ?></option>
                           
                           <?php  } ?>
                   </select>
