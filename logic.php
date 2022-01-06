@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
        
    
         
-            $current_data=file_get_contents("../Problems.json");
+            $current_data=file_get_contents("Problems.json");
             $array_data=json_decode($current_data, true);
                                
             $extra=array(
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     //write data to file
    
-        if(file_put_contents('../Problems.json', get_data())) {
+        if(file_put_contents('Problems.json', get_data())) {
             echo "Data successfully saved";
         }
         else{
