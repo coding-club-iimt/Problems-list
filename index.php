@@ -28,18 +28,9 @@
       <div class="row align-items-stretch no-gutters contact-wrap">
         <div class="col-md-12">
           <div class="form h-100">
-            <h3>Submit Problem</h3>
+            <h3>Practice Problem</h3>
             <form class="mb-5" method="post" id="contactForm" name="contactForm" action="logic.php">
-              <div class="row">
-                <div class="col-md-6 form-group mb-3">
-                  <label for="" class="col-form-label">Problem Name</label>
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Submit name for your problem">
-                </div>
-                <div class="col-md-6 form-group mb-3">
-                  <label for="" class="col-form-label">Problem Link</label>
-                  <input type="text" class="form-control" name="link" id="email"  placeholder="Problem link like https://leetcode.com/problems/sum-of-two-numbers etc">
-                </div>
-              </div>
+              
 
               <div class="row">
                 <div class="col-md-12 form-group mb-3">
@@ -48,7 +39,7 @@
                         <option selected>Choose any topic </option>
                     <?php 
                     
-                    $jsonData = file_get_contents("Topics.json");
+                    $jsonData = file_get_contents("../Topics.json");
                     $data = json_decode($jsonData , true);
                     
                     foreach($data as $key => $value){
@@ -59,7 +50,7 @@
                     
                     ?>
                          
-                          <option value="<?php  echo $value['topic'];   ?>"><?php  echo $value['topic'];   ?></option>
+                          <option value="$1000 below"><?php  echo $value['topic'];   ?></option>
                           
                           <?php  } ?>
                   </select>
@@ -72,9 +63,9 @@
                   <label for="difficulty" class="col-form-label">Difficulty</label>
                   <select class="custom-select" id="difficulty" name="difficulty">
                           <option selected>Choose difficulty level</option>
-                          <option value="Easy">Easy</option>
-                          <option value="Medium">Medium</option>
-                          <option value="Hard">Hard</option>
+                          <option value="0">Easy</option>
+                          <option value="1">Medium</option>
+                          <option value="2">Hard</option>
                   </select>
                </div>
               </div>
