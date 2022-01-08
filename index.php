@@ -37,22 +37,26 @@
                   <label for="budget" class="col-form-label">Topic</label>
                   <select class="custom-select" id="budget" name="topic">
                         <option selected>Choose any topic </option>
-                    <?php 
-                    
-                    $jsonData = file_get_contents("../Topics.json");
-                    $data = json_decode($jsonData , true);
-                    
-                    foreach($data as $key => $value){
-                        
-                      
-                    
-                    
-                    
-                    ?>
+                   
                          
-                          <option value="$1000 below"><?php  echo $value['topic'];   ?></option>
+                          <option value="Arrays"> Arrays</option>
+                          <option value="Linked List"> Linked Lists</option>
+                          <option value="Stack"> Stacks</option>
+                          <option value="Queue"> Queues</option>
+                          <option value="Tree"> Trees</option>
+                          <option value="Graph"> Graphs</option>
+                          <option value="Strings"> Strings</option>
+                          <option value="Searching"> Searching</option>
+                          <option value="Sorting"> Sorting</option>
+                          <option value="Greedy"> Greedy</option>
+                          <option value="Dynamic Programming"> Dynamic Programming</option>
+                          <option value="Backtracking"> Backtracking</option>
+                          <option value="Bitmasking"> Bitmasking</option>
+                          <option value="Divide and Conquer"> Divide and Conquer</option>
+                          <option value="Binary Search"> Binary Search</option>
+
                           
-                          <?php  } ?>
+                         
                   </select>
                 </div>
               </div>
